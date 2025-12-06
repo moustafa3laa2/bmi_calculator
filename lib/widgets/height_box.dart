@@ -44,7 +44,9 @@ class HeightBox extends StatelessWidget {
           ),
           Slider(
             value: 0.5,
-            onChanged: (value) {},
+            onChanged: (value) {
+
+            },
             activeColor: Color(0xffE83D67),
             inactiveColor: Colors.white,
           ),

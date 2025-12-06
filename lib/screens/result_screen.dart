@@ -24,7 +24,11 @@ class ResultScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: CustomNavigationBar(title: "Re - Calculate"),
+      bottomNavigationBar: CustomNavigationBar(
+          onTap: (){
+            Navigator.pop(context);
+          },
+          title: "Re - Calculate"),
     );
   }
 }
