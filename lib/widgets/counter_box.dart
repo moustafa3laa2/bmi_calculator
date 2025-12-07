@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class CounterBox extends StatelessWidget {
   final String title;
   final int value;
-
-  const CounterBox({super.key, required this.title, required this.value});
+  final void Function()? increment;
+  final void Function()? decrement;
+  const CounterBox({super.key, required this.title, required this.value, this.increment, this.decrement});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,9 @@ class CounterBox extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   FloatingActionButton.small(
-                    onPressed: () {},
+                    onPressed: decrement,
+                    key: UniqueKey(),
+                    heroTag: "$title 1",
                     backgroundColor: Color(0xff8B8C9E),
 
                     shape: RoundedRectangleBorder(
@@ -43,7 +46,9 @@ class CounterBox extends StatelessWidget {
                     child: Icon(Icons.remove, size: 32, color: Colors.white),
                   ),
                   FloatingActionButton.small(
-                    onPressed: () {},
+                    onPressed: increment,
+                    key: UniqueKey(),
+                    heroTag: "$title 2",
                     backgroundColor: Color(0xff8B8C9E),
 
                     shape: RoundedRectangleBorder(
