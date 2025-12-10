@@ -5,7 +5,13 @@ class CounterBox extends StatelessWidget {
   final int value;
   final void Function()? increment;
   final void Function()? decrement;
-  const CounterBox({super.key, required this.title, required this.value, this.increment, this.decrement});
+  const CounterBox({
+    super.key,
+    required this.title,
+    required this.value,
+    this.increment,
+    this.decrement,
+  });
 
   @override
   Widget build(BuildContext context) {

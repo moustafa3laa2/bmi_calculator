@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
 
   @override
@@ -10,7 +10,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
       centerTitle: true,
       title: Text(
         "BMI Calculator",
-        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20,),
+        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
       ),
     );
   }
